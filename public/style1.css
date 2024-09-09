@@ -1,0 +1,79 @@
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    text-align: center;
+}
+.card-title {
+    margin-bottom: 10px;
+}
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.footer {
+    background-color: #212529;
+    color: white;
+    padding: 60px 0;
+    border-top: 3px solid #007bff; /* Add a border at the top */
+}
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+.social-icons i {
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+.social-icons a:hover i {
+    color: #007bff;
+}
+.footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+.footer .list-unstyled li a {
+    display: block;
+    color: #ffffff;
+}
+.footer .list-unstyled li a:hover {
+    color: #007bff;
+}
+.footer .social-icons {
+    margin-top: 20px;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.back-to-top:hover {
+    background-color: #0056b3;
+}

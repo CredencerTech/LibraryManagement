@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form with Borders</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-control {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="form-container">
+            <h2 style="text-align: center;">Borrow Book</h2><hr>
+            <form id="dataForm">
+                <div class="form-group">
+                    <label for="userid">User ID</label>
+                    <input type="text" class="form-control" id="userid" placeholder="Enter User ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter Username" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input type="text" class="form-control" id="contact" placeholder="Enter Contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookid">Book ID</label>
+                    <input type="text" class="form-control" id="bookid" placeholder="Enter Book ID" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <p class="mt-3">Want more?? <a href="/actionbooks">Click here.</a></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Get form values
+            const userId = document.getElementById('userid').value;
+            const username = document.getElementById('username').value;
+            const contact = document.getElementById('contact').value;
+            const bookId = document.getElementById('bookid').value;
+
+            // Save data to local storage
+            const formData = { userId, username, contact, bookId };
+            localStorage.setItem('formData', JSON.stringify(formData));
+
+            // Redirect to results page
+            window.location.href = '/mybooks';
+        });
+    </script>
+</body>
+</html>
